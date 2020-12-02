@@ -2,10 +2,10 @@ locals {
   nums = [for s in compact(split("\n", file("${path.module}/input"))) : tonumber(s)]
 }
 
-output "day1-part1" {
+output "part1" {
   value = compact([for i in local.nums : contains(local.nums, 2020 - i) ? i * (2020 - i) : ""])[0]
 }
-output "day1-part2" {
+output "part2" {
   value = compact(
     flatten(
       [for i in local.nums :
