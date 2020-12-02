@@ -1,5 +1,5 @@
 locals {
-  nums = [for s in compact(split("\n", file("${path.module}/day1.input"))) : tonumber(s)]
+  nums = [for s in compact(split("\n", file("${path.module}/input"))) : tonumber(s)]
 }
 
 output "day1-part1" {
